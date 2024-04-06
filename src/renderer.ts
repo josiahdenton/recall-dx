@@ -29,8 +29,13 @@
 // import './index.css';
 //
 // console.log('👋 This message is being logged by "renderer.ts", included via Vite');
-import { createApp } from "vue";
-import App from "./App.vue"
+import 'primevue/resources/themes/aura-dark-purple/theme.css'
+import {createApp} from "vue";
+import App from "./App.vue";
+import PrimeVue from "primevue/config";
 
-createApp(App).mount("#app")
 
+const app = createApp(App);
+// config here for theming
+app.use(PrimeVue, {});
+app.mount("#app");
